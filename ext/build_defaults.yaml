@@ -1,0 +1,21 @@
+---
+project: 'test-suite-vanagon'
+packaging_url: 'git://github.com/puppetlabs/packaging.git --branch=master'
+packaging_repo: 'packaging'
+# foss_platforms will be shipped to the nightly repos
+foss_platforms:
+  - el-7-x86_64
+  - ubuntu-14.04-amd64
+  - windows-2012-x64
+gpg_name: 'info@puppetlabs.com'
+gpg_key: '4BD6EC30'
+deb_targets: 'precise-amd64'
+rpm_targets: 'el-7-x86_64'
+sign_tar: FALSE
+osx_signing_cert: "Developer ID Installer: PUPPET LABS, INC. (VKGLGN2B6Y)"
+osx_signing_keychain: "/Users/jenkins/Library/Keychains/signing.keychain"
+osx_signing_server: 'osx-signer.delivery.puppetlabs.net'
+vanagon_project: TRUE
+apt_repo_name: 'PC1'
+yum_repo_name: 'PC1'
+build_tar: FALSE
