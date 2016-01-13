@@ -26,7 +26,7 @@ component "ruby" do |pkg, settings, platform|
         --enable-bundled-libyaml \
         --disable-install-doc \
         --disable-install-rdoc \
-        #{settings[:host]}
+        #{settings[:host]}"
      ]
   end
 

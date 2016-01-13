@@ -1,21 +1,21 @@
 component "test-component" do |pkg, settings, platform|
+  VERSION = '1.0.0'
   pkg.load_from_json('configs/components/test-component.json')
 
-  pkg.provides 'test-component', '1.0.0'
+  pkg.provides 'test-component', VERSION
 
   pkg.build_requires "ruby"
   pkg.build_requires 'openssl'
 
   pkg.configure do
-    puts "We're configurin' stuff, yeah!"
+    ['/bin/true' ]
   end
 
-
   pkg.build do
-    puts "And now we're buildin' things!"
+    [ settings[:host_gem] + ' build test-component.gemspec' ]
   end
 
   pkg.install do
-    puts "Shit's gettin' real, things are done installed up in here!"
+    [ settings[:gem_install] + ' test-component-' + VERSION + '.gem' ]
   end
 end
