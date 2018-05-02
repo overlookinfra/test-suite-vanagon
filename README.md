@@ -3,8 +3,13 @@
 This is a very small proejct that builds super quickly, ideally for use when making changes to vanagon or to pipelines using vanagon built projects.
 
 
-The artifacts this thing builds are fairly unimportant.
 
+# Usage
+
+The primary usage is just building a project named `dummy`. The project does almost nothing, so it may not exercise all parts of vanagon. You're welcome to add other projects or components that exercise more features if that's helpful. The primary objective for `dummy` is to build very quickly. On EL7 the build takes less than 10 seconds.
+
+
+`bundle exec build dummy el-7-x86_64`
 
 # License
 
